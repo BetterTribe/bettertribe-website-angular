@@ -1,19 +1,24 @@
-<nav class="navbar">
-  <a class="navbar-brand" href="#">Ankit Anand</a>
-  <div class="collapse  navbar-collapse" id="navbarText">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #b3cbdd;">
+  <div class="col-md-4">
+    <a class="navbar-brand" href="#">Ankit Anand</a>
+  </div>
+  <div class="collapse  navbar-collapse col-md-4 offset-md-4" id="navbarText">
     <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="/projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="/blog">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Admin</a>
+          <a class="nav-link" routerLink ="/admin/list">Admin</a>
         </li>
+        <li *ngIf="authService.isLoggedIn" class="nav-item">
+          <a class="nav-link"  (click)="authService.logout()">Logout</a>
+      </li>
     </ul> 
   </div>
 </nav>
