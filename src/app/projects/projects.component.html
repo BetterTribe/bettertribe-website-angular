@@ -1,3 +1,9 @@
-<p>
-  projects works!
-</p>
+<table>
+  <thead></thead>
+  <tbody>
+    <tr *ngFor="let project in projects">
+      <td>{{project.title}}</td>
+      <td>{{project.description}}</td>
+    </tr>
+  </tbody>
+</table>
