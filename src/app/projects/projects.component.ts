@@ -8,12 +8,17 @@ import { FetchProjectsService } from '../services/fetch-projects.service';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  projects: Project[]
+  projects: Project[];
   constructor(private fetchProjectService: FetchProjectsService) { }
 
   ngOnInit() {
     this.fetchProjectService.getProjects().subscribe(projects => {
-      this.projects = projects.map(project => {return project})
+      this.projects = projects.map(project => {return {
+        id: project.payload.doc.id,
+        ...project.payload.doc.data()
+      } as Project;
+    })
+    console.log(this.projects)
     });
   }
 

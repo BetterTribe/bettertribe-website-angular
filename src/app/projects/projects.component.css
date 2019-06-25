@@ -1,0 +1,31 @@
+a {
+    color: black;
+}
+.project-grid-container {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 100px auto;
+}
+.projects-list {
+    display: grid;
+    grid-row: 2/3;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 100px;
+    grid-template-areas: 
+        "pic title"
+        "pic description"
+}
+
+.project-img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    object-fit: scale-down;
+}
+.title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.description {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}

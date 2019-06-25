@@ -8,6 +8,8 @@ export class FetchProjectsService {
   constructor(private firestore: AngularFirestore) { }
 
   getProjects(){
+    console.log("getProjects")
+    console.log(this.firestore.collection('projects').snapshotChanges())
     return this.firestore.collection('projects').snapshotChanges();
   }
 }

@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { environment } from '../environments/environment';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { BlogComponent } from './blog/blog.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
