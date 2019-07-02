@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { BlogitemComponent } from './blogitem/blogitem.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
     FooterComponent,
     HomeComponent,
     ProjectsComponent,
-    BlogComponent
+    BlogComponent,
+    BlogitemComponent
   ],
   imports: [
     BrowserModule,
